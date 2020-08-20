@@ -92,7 +92,7 @@ app.use((err, req, res, next) => {
   res.send('Server Error');
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const init = async function() {
   try {
