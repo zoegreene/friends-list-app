@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const { STRING, INTEGER } = Sequelize;
+const databaseUrl = process.env.DATABASE_URL || 'postgres://localhost/friendslist'
 
-const db = new Sequelize('postgres://localhost/friendslist', {
+const db = new Sequelize(databaseUrl, {
   logging: false
 });
 
